@@ -19,4 +19,6 @@ hpc_wday$Global_active_power <- as.numeric(levels(hpc_wday$Global_active_power))
 hpc_wday$datetime <- as.POSIXct(paste(hpc_wday$Date, hpc_wday$Time), format="%Y-%m-%d %H:%M:%S")
 
 #Plot the date/time factor by Global Active Power
+png('Plot2.png', height = 480, width = 480)
 plot(hpc_wday$datetime, hpc_wday$Global_active_power, type = "l", xlab = "", ylab = "Global Active Power (kilowatts)")
+dev.off()

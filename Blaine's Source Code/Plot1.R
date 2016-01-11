@@ -17,6 +17,6 @@ hpc_ts <- transform (subset(hpc, Date=="1/2/2007"| Date =="2/2/2007"),
 gap <- as.numeric(levels(hpc_ts$Global_active_power))[hpc_ts$Global_active_power]
 
 #Histogram with appropriate labels
+png('Plot1.png', height = 480, width = 480)
 hist(gap, col = "red", main="Global Active Power", xlab = "Global Active Power (kilowatts)", ylab = "Freqency")
-
-
+dev.off()

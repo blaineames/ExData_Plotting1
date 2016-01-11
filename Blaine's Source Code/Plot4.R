@@ -1,3 +1,4 @@
+png('Plot4.png', height = 480, width = 480)
 #set plotting area
 par(mfrow=c(2,2))
 
@@ -20,3 +21,5 @@ legend("topright", c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), lty=
 #Global Reactive Power
 hpc_wday$Global_reactive_power <- as.numeric(as.character(hpc_wday$Global_reactive_power))
 plot(hpc_wday$datetime, hpc_wday$Global_reactive_power, type = "l", col = "black", xlab = "", ylab = "Global_reactive_power")
+
+dev.off()
